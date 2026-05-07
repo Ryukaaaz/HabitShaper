@@ -1,5 +1,8 @@
 import express from "express"
 import cors from "cors"
+import authRoutes from "./routes/auth.js"
+import habitRoutes from "./routes/habit.js"
+
 
 const app = express()
 
@@ -21,6 +24,6 @@ app.listen(3000, () => {
 //   .catch((err) => console.log(err))
 
 
-import authRoutes from "./routes/auth.js"
-
 app.use("/auth", authRoutes)
+
+app.use("/habits", habitRoutes)
