@@ -13,3 +13,9 @@ app.get("/ping", (_, res) => {
 app.listen(3000, () => {
   console.log("Server running")
 })
+
+import { db } from "./db/connection.js"
+
+db.getConnection()
+  .then(() => console.log("DB connected"))
+  .catch((err) => console.log(err))
