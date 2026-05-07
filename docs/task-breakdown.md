@@ -1,9 +1,9 @@
 # Task Breakdown
 
 ## Setup
-- [ ] Backend setup
+- [ V ] Backend setup
 - [ ] Frontend setup
-- [ ] Database setup
+- [ V ] Database setup
 
 ## Features
 - [ ] Authentication

@@ -14,8 +14,13 @@ app.listen(3000, () => {
   console.log("Server running")
 })
 
-import { db } from "./db/connection.js"
+// import { db } from "./db/connection.js"
 
-db.getConnection()
-  .then(() => console.log("DB connected"))
-  .catch((err) => console.log(err))
+// db.getConnection()
+//   .then(() => console.log("DB connected"))
+//   .catch((err) => console.log(err))
+
+
+import authRoutes from "./routes/auth.js"
+
+app.use("/auth", authRoutes)
