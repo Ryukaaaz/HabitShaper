@@ -6,9 +6,9 @@
 - [ V ] Database setup
 
 ## Features
-- [ ] Authentication
-- [ ] Habit CRUD
-- [ ] Goal CRUD
+- [ V ] Authentication
+- [ V ] Habit CRUD
+- [ V ] Goal CRUD
 - [ ] Streak tracking
 
 ## Infrastructure
