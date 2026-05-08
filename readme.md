@@ -4,9 +4,23 @@ positive habits and break negative ones through daily tracking and streak manage
 
 this application built with:
 
-## Frontend
+## Tech Stack
 
-## Backend
+Frontend:
+- React
+- TypeScript
+- TailwindCSS
+- Framer Motion
+
+Backend:
+- Express
+- JWT
+- MySQL2
+
+Infrastructure:
+- Docker
+- Docker Compose
+
 
 
 # Features
@@ -26,7 +40,7 @@ Requirements:
 ### 1. Clone repository
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/Ryukaaaz/HabitShaper
 ```
 
 ### 2. Setup environment
@@ -62,27 +76,3 @@ database/init.sql
 ```
 
 ---
-
-## Tech Stack
-
-Frontend:
-- React
-- TypeScript
-- TailwindCSS
-- Framer Motion
-
-Backend:
-- Express
-- JWT
-- MySQL2
-
-Infrastructure:
-- Docker
-- Docker Compose
-
-
-# Run Application
-
-```bash
-docker compose up --build
-```
