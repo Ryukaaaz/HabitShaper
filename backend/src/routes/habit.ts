@@ -81,8 +81,28 @@ router.put("/:id", async (req: any, res) => {
 router.delete("/:id", async (req: any, res) => {
   try {
 
+    // check habit logs
+    const [logs]: any = await db.query(
+      `
+      SELECT id
+      FROM habit_logs
+      WHERE habit_id = ?
+      LIMIT 1
+      `,
+      [req.params.id]
+    )
+
+    if (logs.length > 0) {
+      return res.status(400).json({
+        message: "Cannot delete habit with tracking history"
+      })
+    }
+
     await db.query(
-      "DELETE FROM habits WHERE id = ? AND user_id = ?",
+      `
+      DELETE FROM habits
+      WHERE id = ? AND user_id = ?
+      `,
       [req.params.id, req.user.id]
     )
 
@@ -99,7 +119,6 @@ router.delete("/:id", async (req: any, res) => {
     })
   }
 })
-
 
 // track habit completion for the logged in user
 router.post("/:id/check", async (req, res) => {

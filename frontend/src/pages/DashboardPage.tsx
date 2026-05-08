@@ -155,18 +155,23 @@ export default function DashboardPage() {
   const deleteHabit = async (id: number) => {
     if (!window.confirm("Are you sure you want to delete this habit?")) {
       return
-    } 
+    }
 
     try {
+
       await api.delete(`/habits/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
       })
-
       fetchHabits()
-    } catch (error) {
-      console.log(error)
+
+    } catch (error: any) {
+      const message =
+        error.response?.data?.message ||
+        "Failed to delete habit"
+
+      alert(message)
     }
   }
 
@@ -447,11 +452,11 @@ export default function DashboardPage() {
                 Weekly Report
               </button> */}
 
-              <button
+              {/* <button
                 className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:opacity-90 transition px-5 py-2.5 rounded-2xl font-medium shadow-lg"
               >
                 + Add Goal
-              </button>
+              </button> */}
 
             </div>
 
