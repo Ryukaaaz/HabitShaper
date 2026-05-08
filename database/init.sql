@@ -1,0 +1,32 @@
+CREATE DATABASE IF NOT EXISTS habit_shaper;
+
+USE habit_shaper;
+
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  email VARCHAR(255) UNIQUE NOT NULL,
+  password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE habits (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  type ENUM('BUILD', 'BREAK') NOT NULL,
+  user_id INT NOT NULL,
+  FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+CREATE TABLE goals (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(255) NOT NULL,
+  habit_id INT NOT NULL,
+  FOREIGN KEY (habit_id) REFERENCES habits(id)
+);
+
+CREATE TABLE habit_logs (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  habit_id INT NOT NULL,
+  date DATE NOT NULL,
+  completed BOOLEAN NOT NULL,
+  FOREIGN KEY (habit_id) REFERENCES habits(id)
+);

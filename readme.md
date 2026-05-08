@@ -4,12 +4,10 @@ positive habits and break negative ones through daily tracking and streak manage
 
 this application built with:
 
-- React
-- TypeScript
-- TailwindCSS
-- Express
-- MySQL
-- Docker Compose
+## Frontend
+
+## Backend
+
 
 # Features
 
@@ -81,3 +79,10 @@ Backend:
 Infrastructure:
 - Docker
 - Docker Compose
+
+
+# Run Application
+
+```bash
+docker compose up --build
+```

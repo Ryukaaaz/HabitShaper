@@ -1,8 +1,4 @@
 node_modules
+.env
 dist
 build
-.env
-.vscode
-coverage
-npm-debug.log
-.DS_Store

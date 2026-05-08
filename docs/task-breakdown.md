@@ -2,14 +2,14 @@
 
 ## Setup
 - [ V ] Backend setup
-- [ ] Frontend setup
+- [ V ] Frontend setup
 - [ V ] Database setup
 
 ## Features
 - [ V ] Authentication
 - [ V ] Habit CRUD
 - [ V ] Goal CRUD
-- [ ] Streak tracking
+- [ V ] Streak tracking
 
 ## Infrastructure
 - [ ] Docker setup
