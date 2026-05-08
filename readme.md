@@ -46,7 +46,8 @@ git clone https://github.com/Ryukaaaz/HabitShaper
 ### 2. Setup environment
 
 ```bash
-cp .env.example .env
+change directory to HabitShaper
+example C:\Users\micha> cd HabitShaper
 ```
 
 ### 3. Start application
