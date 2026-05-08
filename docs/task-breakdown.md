@@ -12,5 +12,5 @@
 - [ V ] Streak tracking
 
 ## Infrastructure
-- [ ] Docker setup
-- [ ] README
+- [ V ] Docker setup
+- [ V ] README
